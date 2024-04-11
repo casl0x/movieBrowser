@@ -4,10 +4,16 @@ export default function Footer() {
   return (
     <footer >
       <a href="https://www.themoviedb.org/" className='tmdb'><img src="/logo-short.svg" alt="logo of TMDB" /></a>        
-      <div className='api-link'>
-        <a href="https://www.themoviedb.org/terms-of-use">Terms of use</a>
-        <a href="https://www.themoviedb.org/api-terms-of-use">API terms of use</a>
-        <a href="https://developer.themoviedb.org/docs/faq">About TMDB</a>
+      <div className='api'>
+        <p></p>
+        <a href="https://developer.themoviedb.org/docs/faq" className='link'>About TMDB</a>        
+        <a href="https://www.themoviedb.org/terms-of-use" className='link'>Terms of use</a>
+        <a href="https://www.themoviedb.org/api-terms-of-use" className='link'>API terms of use</a>
+      </div>
+      <div className='developer'>
+        <p></p>
+        <a href="" className='link'>About the developer</a>
+        <a href="https://github.com/casl0x/movieBrowser">Repository of the project</a>        
       </div>
     </footer>
   )

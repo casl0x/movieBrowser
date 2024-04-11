@@ -58,9 +58,23 @@ footer {
   justify-content: center;
 }
 
-.api-link {
+.api {
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
+}
+.api-link {
+  color: rgb(1, 180, 228);
+}
+
+.developer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.link {
+  color: rgb(1, 180, 228);
 }
 
 .tmdb {
@@ -69,4 +83,10 @@ footer {
 
 body {
   font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  background-color: rgb(13, 37, 63);
+}
+
+a {
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */

@@ -7,9 +7,23 @@ footer {
     justify-content: center;
 }
 
-.api-link {
+.api {
     display: flex;
     flex-direction: column;
+    gap: 0.25rem;
+    &-link {
+        color: $secondary;
+    }
+}
+
+.developer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.link {
+    color: $secondary;
 }
 
 .tmdb {

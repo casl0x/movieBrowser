@@ -6,5 +6,11 @@
 body {
     font: {
         family: $roboto;
+        size: 1rem;
     }
+    background-color: $primary;
+}
+
+a {
+    text-decoration: none;
 }
