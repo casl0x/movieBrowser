@@ -8,18 +8,20 @@ import WatchList from './pages/WatchList';
 import About from './pages/About';
 
 // components
-import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function App() {
   return (
     <div className="app">
-        <Navbar />
+        <Header />
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/watchlist" element={<WatchList />} />
             <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
     </div>
   )
 }

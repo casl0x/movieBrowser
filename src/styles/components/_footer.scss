@@ -1,0 +1,16 @@
+footer {
+    border-top: 1px solid black;
+    padding-top: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.api-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.tmdb {
+    width: 30%;
+}

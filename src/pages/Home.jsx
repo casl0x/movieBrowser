@@ -1,10 +1,10 @@
 import React from 'react'
-import { RequestBanner } from '../utils/request'
+import { Banner } from '../components/Banner'
 
 export default function Home() {
   return (
     <>
-      <RequestBanner />    
+        <Banner />
     </>
 
   )
