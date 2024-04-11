@@ -1,4 +1,10 @@
 @import './utils/resets';
 @import './utils/variables';
 
-@import './components/footer'
+@import './components/footer';
+
+body {
+    font: {
+        family: $roboto;
+    }
+}
