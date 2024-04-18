@@ -3,12 +3,10 @@
 
 @import './components/navbar';
 @import './components/footer';
+@import './components/banner';
 
 body {
-    font: {
-        family: $roboto;
-        size: 1rem;
-    }
+    font-family: $roboto;
     background-color: $primary;
 }
 

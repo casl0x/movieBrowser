@@ -1,0 +1,19 @@
+.daily {
+    color: $text;
+    font: {
+        size: 2rem;
+        weight: 900;
+    }
+    padding: 2rem 1rem;
+}
+
+.daytop {
+    display: flex;
+    flex-flow: row n0wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.poster {
+    width: 100%;
+}

@@ -19,13 +19,16 @@ export function Banner () {
 
     return (
         <div className="banner">
-            <figure>
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} className="img-banner"/>
-            </figure>
-            <div className="bannerInfo">
-                <h1 className="bannerTitle">{movie.title}</h1>
-                <p className="infos"><span className="color">{movie.vote_average}</span></p>
-                <p className="overviewBanner">{movie.overview}</p>
+            <h1 className="daily">Daily discoveries</h1>
+            <div className="daytop">
+                <figure >
+                    <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="poster"/>
+                </figure>
+                <div className="bannerInfo">
+                    <h1 className="bannerTitle">{movie.title}</h1>
+                    <p className="infos"><span className="color">{movie.vote_average}</span></p>
+                    <p className="overviewBanner">{movie.overview}</p>
+                </div>                
             </div>
         </div>
     )
