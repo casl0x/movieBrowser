@@ -1,1 +1,11 @@
 https://www.youtube.com/watch?v= (key)
+
+home → top rated movie and show, upcomming movie
+
+movie → all movie + genre filter => display popularity
+
+show → all movie + genre filter => display popularity
+
+watchlist
+
+favorite 
