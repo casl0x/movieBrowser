@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Favorite from './pages/Favorite';
 import WatchList from './pages/WatchList';
+import Genre from './pages/Genre';
 
 // components
 import Navbar from './components/Navbar';
@@ -16,6 +17,7 @@ export default function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/Genre" element={<Genre />} />
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/watchlist" element={<WatchList />} />
         </Routes>

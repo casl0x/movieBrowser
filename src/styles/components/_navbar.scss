@@ -1,5 +1,5 @@
 .navbar {
-    height: 3.5rem;
+    height: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,29 +18,24 @@
         flex-direction: column;
         gap: 1rem;
         width: 100%;
-        border-top: 1pxsolid #fff;
         position: absolute;
-        top: 80px;
-        left: -110%;
+        top: 3rem;
+        right: -110%;
         opacity: 1;
-        transition: all 0.5s ease;
     }
     &-icon {
         display: block;
         position: absolute;
         top: 50%;
-        right: 0;
-        transform: translate(-100%, -50%);
+        right: 3%;
         width: 2rem;
-        height: 2rem;
         cursor: pointer;
     }
 }
 
 .active {
-    left: 0px;
+    right: 0;
     opacity: 1;
-    transition: all 0.5s ease;
     z-index: 1;
 }
   
@@ -57,7 +52,6 @@
     display: flex;
     list-style: none;
     text-align: center;
-    margin-right: 2rem;
 }
 
 .no-icon {
