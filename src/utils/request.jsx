@@ -12,7 +12,7 @@ export async function FetchBanner() {
     };
             
     try {
-        const response = await fetch(`${API_URL}movie/top_rated?api_key=${API_KEY}`, options);
+        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}`, options);
         if (!response.ok) {
         throw new Error('Network response was not ok');
         }
