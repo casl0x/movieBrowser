@@ -36,6 +36,11 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/movie" onClick={toggleActive} className='navlink'>
+                    Movie
+                  </Link>
+                </li>
+                <li>
                   <Link to="/favorite" onClick={toggleActive} className='navlink'>
                     Favorite
                   </Link>
@@ -46,9 +51,6 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/genre" onClick={toggleActive} className='navlink'>
-                    Genre
-                  </Link>
                 </li>
               </ul>         
             </div>

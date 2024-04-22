@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
-import { FetchTopRated } from "../utils/request";
+import React, { useState } from 'react'
+import { FetchUpcoming } from '../utils/request';
 
-export function Banner () {
+export default function Upcoming() {
     const [movie, setMovie] = useState([]);
     
     useEffect(() => {
-        const fetchMovie = async () => {
-            const movies = await FetchTopRated();
-            const randomMovie = Math.floor(Math.random()*movies.length);
-            setMovie(movies[randomMovie])
+        const fetchComingSoon = async () => {
+            const movies = await FetchUpcoming();
+            setMovie(movies)
         }
-        fetchMovie()
+        fetchComingSoon()
     }, [])
 
     if (!movie) {
@@ -30,4 +29,4 @@ export function Banner () {
             </div>
         </div>
     )
-};
+}
