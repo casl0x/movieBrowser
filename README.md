@@ -1,7 +1,7 @@
 # Movie Browser 📝
 
 ## About the Project :
-TodoApp is a application to lists all the things you have to do. Click here to test it → [📝](https://todoapp-orpin-two.vercel.app/).
+TodoApp is a application to lists all the movies. Click here to test it → [🍿](https://movie-browser-wine.vercel.app/).
 
 **Deploy with :** [Vercel](https://vercel.com/)
 
