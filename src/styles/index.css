@@ -157,6 +157,37 @@ footer {
   padding: 1rem;
 }
 
+.slick-slider {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 1rem;
+  width: 80%;
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.slick-slide div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(13, 37, 63);
