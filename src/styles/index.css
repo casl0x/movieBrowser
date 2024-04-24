@@ -132,13 +132,6 @@ footer {
   width: 5rem;
 }
 
-.daily {
-  color: #ffffff;
-  font-size: 2rem;
-  font-weight: 900;
-  padding: 1rem;
-}
-
 .daytop {
   display: flex;
   flex-flow: row nowrap;
@@ -155,6 +148,13 @@ footer {
   width: 55%;
   border-radius: 24px 0 0 24px;
   height: 100%;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 900;
+  padding: 1rem;
 }
 
 body {

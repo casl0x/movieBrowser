@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FetchUpcoming } from '../utils/request';
 
 export default function Upcoming() {
@@ -12,20 +12,19 @@ export default function Upcoming() {
         fetchComingSoon()
     }, [])
 
-    if (!movie) {
-        return <div>Loading...</div>;
-    }
-
     return (
         <div>
-            <h1 className="daily">Daily discoveries</h1>
-            <div className="daytop">
-                <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="poster"/>
-                <div className="banner">
-                    <p className="banner-release">{movie.release_date}</p>
-                    <h2 className="banner-title">{movie.title}</h2>
-                    <p className="banner-vote">{movie.vote_average}</p>
-                </div>                
+            <h1 className="title">Upcoming Movie</h1>
+            <div>
+                {movie.map(m => (
+                    <div className="" key={m.id}>
+                        <img className="" src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} />
+                        <div className="">
+                            <h3 className="">{m.title}</h3>
+                            <p className="">{m.release_date}</p>
+                        </div>
+                    </div>
+                ))}
             </div>
         </div>
     )
