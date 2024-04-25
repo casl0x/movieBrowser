@@ -167,8 +167,8 @@ footer {
 .movie-poster {
   display: flex;
   margin: 0 auto;
-  height: 40vh;
-  width: 80%;
+  height: 90%;
+  width: 70%;
   border-radius: 5%;
 }
 
