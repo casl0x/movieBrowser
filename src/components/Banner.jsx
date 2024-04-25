@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FetchTopRated } from "../utils/request";
+import convertDate from "../utils/convertDate";
 
 export function Banner () {
     const [movie, setMovie] = useState([]);
@@ -23,7 +24,7 @@ export function Banner () {
             <div className="daytop">
                 <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="poster"/>
                 <div className="banner">
-                    <p className="banner-release">{movie.release_date}</p>
+                    <p className="banner-release">{convertDate(movie.release_date)}</p>
                     <h2 className="banner-title">{movie.title}</h2>
                     <p className="banner-vote">{movie.vote_average}</p>
                 </div>                

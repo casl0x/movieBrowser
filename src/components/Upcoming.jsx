@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { FetchUpcoming } from '../utils/request';
+import convertDate from '../utils/convertDate';
 
 export default function Upcoming() {
     const [movie, setMovie] = useState([]);
@@ -34,7 +35,7 @@ export default function Upcoming() {
                         <div key={m.id}>
                             <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
                             <h2 className='movie-title'>{m.title}</h2>
-                            <p className='movie-info'>{m.release_date}</p>
+                            <p className='movie-info'>{convertDate(m.release_date)}</p>
                         </div>
                     ))}
                 </Slider>
