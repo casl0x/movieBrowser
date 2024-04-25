@@ -37,3 +37,17 @@ export async function FetchUpcoming() {
         throw new Error("Can't fetch the datas")
     }    
 }
+
+export async function FetchMovie(movieId) {         
+    try {
+        const response = await fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}

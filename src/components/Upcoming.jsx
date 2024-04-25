@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
@@ -32,11 +33,14 @@ export default function Upcoming() {
             <div className='movie'>
                 <Slider {...settings}>
                     {movie.map(m => (
-                        <div key={m.id}>
-                            <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
-                            <h2 className='movie-title'>{m.title}</h2>
-                            <p className='movie-info'>{convertDate(m.release_date)}</p>
-                        </div>
+                        <Link to={`/movie/${m.id}`} key={m.id}>
+                            <div>
+                                <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
+                                <h2 className='movie-title'>{m.title}</h2>
+                                <p className='movie-info'>{convertDate(m.release_date)}</p>
+                            </div>                        
+                        </Link>
+
                     ))}
                 </Slider>
             </div>

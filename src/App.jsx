@@ -17,7 +17,7 @@ export default function App() {
         <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/movie" element={<Movie />} />
+            <Route path='/movie/:movieId' element={<Movie />}/>
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/watchlist" element={<WatchList />} />
         </Routes>
