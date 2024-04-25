@@ -37,3 +37,31 @@ export async function FetchUpcoming() {
         throw new Error("Can't fetch the datas")
     }    
 }
+
+export async function FetchPopularMovie() {         
+    try {
+        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchPopularSeries() {         
+    try {
+        const response = await fetch(`${API_URL}tv/popular?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
