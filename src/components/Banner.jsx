@@ -18,7 +18,7 @@ export function Banner () {
     }
 
     return (
-        <div>
+        <section>
             <h1 className="title">Daily discoveries</h1>
             <div className="daytop">
                 <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="poster"/>
@@ -28,6 +28,6 @@ export function Banner () {
                     <p className="banner-vote">{movie.vote_average}</p>
                 </div>                
             </div>
-        </div>
+        </section>
     )
 };

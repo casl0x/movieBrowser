@@ -11,8 +11,10 @@ export default function Upcoming() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
+        arrows: false,
+        dots: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
     }
     
     useEffect(() => {
@@ -24,21 +26,19 @@ export default function Upcoming() {
     }, [])
 
     return (
-        <div>
+        <section className='container'>
             <h1 className="title">Upcoming Movie</h1>
-            <div>
+            <div className='movie'>
                 <Slider {...settings}>
                     {movie.map(m => (
                         <div key={m.id}>
-                            <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} />
-                            <div>
-                                <h3>{m.title}</h3>
-                                <p>{m.release_date}</p>
-                            </div>
+                            <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
+                            <h2 className='movie-title'>{m.title}</h2>
+                            <p className='movie-info'>{m.release_date}</p>
                         </div>
                     ))}
                 </Slider>
             </div>
-        </div>
+        </section>
     )
 }

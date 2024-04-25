@@ -1,27 +1,22 @@
-.slick-slider {
-    position: relative;
-    height: 100%;
-    width: 90%;
+.movie {
+  margin: 1rem auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &-poster {
     display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .slick-list {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    padding: 1rem;
+    margin: 0 auto;
+    height: 40vh;
     width: 80%;
+    border-radius: 5%;
   }
-  .slick-track {
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-  }
-  .slick-slide div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+}
+
+.slick-slide div {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
