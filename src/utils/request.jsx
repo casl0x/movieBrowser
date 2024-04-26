@@ -38,6 +38,20 @@ export async function FetchUpcoming() {
     }    
 }
 
+export async function FetchNowPlaying() {         
+    try {
+        const response = await fetch(`${API_URL}movie/now_playing?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
 export async function FetchPopularMovie() {         
     try {
         const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}`, options);
@@ -63,5 +77,19 @@ export async function FetchPopularSeries() {
     } catch (error) {
         console.error(error)
         throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchMovie(movieId) {         
+    try {
+        const response = await fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
     }    
 }

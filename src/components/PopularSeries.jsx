@@ -18,7 +18,7 @@ export default function PopularSeries() {
         slidesToScroll: 6,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 770,
                 settings: {
                   slidesToShow: 4,
                   slidesToScroll: 4,
