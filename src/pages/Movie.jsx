@@ -21,7 +21,7 @@ export default function Movie() {
         <div>
           <h2>{movie.title}</h2>
           <p>{movie.overview}</p>
-          <p>Release Date: {movie.release_date}</p>
+          <p>Release Date: {convertDate(movie.release_date)}</p>
         </div>
       ) : (
         <p>Loading...</p>

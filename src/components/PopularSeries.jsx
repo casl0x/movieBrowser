@@ -45,15 +45,14 @@ export default function PopularSeries() {
 
     return (
         <section className='container'>
-            <h1 className="title">Popular Movies</h1>
+            <h1 className="title">Popular Series</h1>
             <div className='movie'>
                 <Slider {...settings}>
                     {serie.map(s => (
                         <Link to={`/tv/${s.id}`} key={s.id}>
                             <div>
-                                <img src={`https://image.tmdb.org/t/p/w500${s.poster_path}`} alt={s.title} className='movie-poster'/>
-                                <h2 className='movie-title'>{s.title}</h2>
-                                <p className='movie-info'>{convertDate(s.release_date)}</p>
+                                <img src={`https://image.tmdb.org/t/p/w500${s.poster_path}`} alt={s.name} className='movie-poster'/>
+                                <h2 className='movie-title'>{s.name}</h2>
                             </div>                        
                         </Link>
                     ))}
