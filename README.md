@@ -7,7 +7,7 @@ Movie Browser is a application to lists all the movies. Click here to test it â†
 
 
 ### Built with : 
-* React - <img src="https://skillicons.dev/icons?i=react" alt="image" style="width:auto;height:20px;">
+* React - <img src="https://skillicons.dev/icons?i=react" alt="image" style="width:auto;height:20px;"> (react-router-dom, react-responsive, react-slick)
 * Vite - <img src="https://skillicons.dev/icons?i=vite" alt="image" style="width:auto;height:20px;">
 * Sass - <img src="https://skillicons.dev/icons?i=sass" alt="image" style="width:auto;height:20px;">
 * TMDB API (https://developer.themoviedb.org/docs/getting-started)
