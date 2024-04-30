@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { FetchTopRated } from "../utils/request";
-import convertDate from "../utils/convertDate";
+import {convertDate} from "../utils/convertTime";
 
 export function Banner () {
     const [movie, setMovie] = useState([]);

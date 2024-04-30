@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { FetchPopularMovie} from '../utils/request';
-import convertDate from '../utils/convertDate';
+import {convertDate} from '../utils/convertTime';
 
 export default function PopularMovies() {
     const [movie, setMovie] = useState([]);

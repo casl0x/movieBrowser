@@ -4,7 +4,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { FetchNowPlaying } from '../utils/request';
-import convertDate from '../utils/convertDate';
+import {convertDate} from '../utils/convertTime';
 
 export default function NowPlaying() {
     const [movie, setMovie] = useState([]);

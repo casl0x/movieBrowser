@@ -4,7 +4,6 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { FetchPopularSeries} from '../utils/request';
-import convertDate from '../utils/convertDate';
 
 export default function PopularSeries() {
     const [serie, setSerie] = useState([]);

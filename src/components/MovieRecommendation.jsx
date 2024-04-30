@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import Slider from 'react-slick';
 import { Link } from 'react-router-dom';
 import { FetchRecommendatedMovies } from '../utils/request'
-import convertDate from '../utils/convertDate';
+import {convertDate} from '../utils/convertTime';
 
 export default function MovieRecommendation() {
     const [movie, setMovie] = useState([]);
