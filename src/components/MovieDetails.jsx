@@ -28,7 +28,6 @@ export default function MovieDetails() {
               <p>Release Date: {convertDate(movie.release_date)}</p>
               <p>{movie.overview}</p>              
             </div>
-
           </div>
         ) : (
           <p>Loading...</p>

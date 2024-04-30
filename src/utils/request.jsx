@@ -150,9 +150,9 @@ export async function FetchRecommendatedSeries(tvId) {
     }    
 }
 
-export async function FetchAllMovie(page) {         
+export async function FetchAllMovie() {         
     try {
-        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}&page=${page}`, options);
+        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}&page=1`, options);
         if (!response.ok) {
         throw new Error('Network response was not ok');
         }

@@ -15,6 +15,7 @@ export default function Navbar() {
   
   return (
     <header className='header'>
+        <img src="public/logo-long.svg" alt="" className='logo'/>
         <nav className='navbar'>
           <div className="navbar-container">
             <div className='navbar-icon' onClick={toggleActive}>
