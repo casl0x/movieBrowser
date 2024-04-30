@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { FetchUpcoming } from '../utils/request';
+import { FetchNowPlaying } from '../utils/request';
 import convertDate from '../utils/convertDate';
 
-export default function Upcoming() {
+export default function NowPlaying() {
     const [movie, setMovie] = useState([]);
 
     const settings = {
@@ -36,16 +36,16 @@ export default function Upcoming() {
     }
     
     useEffect(() => {
-        const fetchComingSoon = async () => {
-            const movies = await FetchUpcoming();
+        const fetchInTheater = async () => {
+            const movies = await FetchNowPlaying();
             setMovie(movies)
         }
-        fetchComingSoon()
+        fetchInTheater()
     }, [])
 
     return (
         <section className='container'>
-            <h1 className="title">Upcoming Movie</h1>
+            <h1 className="title">Now in Theater</h1>
             <div className='movie'>
                 <Slider {...settings}>
                     {movie.map(m => (
@@ -56,6 +56,7 @@ export default function Upcoming() {
                                 <p className='movie-info'>{convertDate(m.release_date)}</p>
                             </div>                        
                         </Link>
+
                     ))}
                 </Slider>
             </div>

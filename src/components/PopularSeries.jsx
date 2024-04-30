@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import { FetchUpcoming } from '../utils/request';
+import { FetchPopularSeries} from '../utils/request';
 import convertDate from '../utils/convertDate';
 
-export default function Upcoming() {
-    const [movie, setMovie] = useState([]);
+export default function PopularSeries() {
+    const [serie, setSerie] = useState([]);
 
     const settings = {
         dots: false,
@@ -36,24 +36,23 @@ export default function Upcoming() {
     }
     
     useEffect(() => {
-        const fetchComingSoon = async () => {
-            const movies = await FetchUpcoming();
-            setMovie(movies)
+        const fetchPopSeries = async () => {
+            const series = await FetchPopularSeries();
+            setSerie(series)
         }
-        fetchComingSoon()
+        fetchPopSeries()
     }, [])
 
     return (
         <section className='container'>
-            <h1 className="title">Upcoming Movie</h1>
+            <h1 className="title">Popular Series</h1>
             <div className='movie'>
                 <Slider {...settings}>
-                    {movie.map(m => (
-                        <Link to={`/movie/${m.id}`} key={m.id}>
+                    {serie.map(s => (
+                        <Link to={`/tv/${s.id}`} key={s.id}>
                             <div>
-                                <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
-                                <h2 className='movie-title'>{m.title}</h2>
-                                <p className='movie-info'>{convertDate(m.release_date)}</p>
+                                <img src={`https://image.tmdb.org/t/p/w500${s.poster_path}`} alt={s.name} className='movie-poster'/>
+                                <h2 className='movie-title'>{s.name}</h2>
                             </div>                        
                         </Link>
                     ))}
