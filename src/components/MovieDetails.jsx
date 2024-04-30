@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { FetchMovie } from '../utils/request';
 import convertDate from '../utils/convertDate';
+import convertTime from '../utils/convertTime';
 
 export default function MovieDetails() {
     const [movie, setMovie] = useState(null);
@@ -23,6 +24,7 @@ export default function MovieDetails() {
           <div>
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <h2>{movie.title}</h2>
+            <p>{convertTime(movie.runtime)}</p>
             <p>Release Date: {convertDate(movie.release_date)}</p>
             <p>{movie.overview}</p>
             
