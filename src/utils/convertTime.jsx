@@ -4,7 +4,7 @@ export function convertDate(date) {
     }
 
     const splitDate = date.split('-')
-    const formatedDate = `${splitDate[2]}.${splitDate[1]}.${splitDate[0]}`
+    const formatedDate = `${splitDate[0]}`
 
     return formatedDate;
 }

@@ -9,7 +9,6 @@ export default function MovieDetails() {
     const { movieId } = useParams();
     const isMobile = useMediaQuery({maxWidth: "768px"});
     const imgClassName = isMobile ? "horizontal" : "vertical";
-    const imgSource = isMobile ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : `https://image.tmdb.org/t/p/w500${movie.poster_path}`
   
     useEffect(() => {
       const fetchMovieDetails = async () => {
@@ -26,10 +25,14 @@ export default function MovieDetails() {
         {movie ? (
           <div className='details'>
             <h2>{movie.title}</h2>            
-            <img src={imgSource} alt={movie.title} className={`details-img ${imgClassName}`}/>
+            <img src={isMobile ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : `https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className={`details-img ${imgClassName}`}/>
             <div className='details-info'>
               <p>{convertTime(movie.runtime)}</p>
-              <p>Release Date: {convertDate(movie.release_date)}</p>
+              <p>( {convertDate(movie.release_date)} )</p>
+              <p>Genres : {movie.genres.map((genre, index) => (
+                    <span key={genre.id}>{genre.name} {index !== movie.genres.length - 1 && " - "}</span>
+                  ))}
+               </p> 
               <p>{movie.overview}</p>              
             </div>
           </div>
