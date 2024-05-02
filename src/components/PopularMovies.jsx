@@ -45,7 +45,7 @@ export default function PopularMovies() {
 
     return (
         <section className='container'>
-            <h1 className="title">Popular Movies</h1>
+            <h2 className="title">Popular Movies</h2>
             <div className='movie'>
                 <Slider {...settings}>
                     {movie.map(m => (

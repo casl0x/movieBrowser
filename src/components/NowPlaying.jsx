@@ -45,7 +45,7 @@ export default function NowPlaying() {
 
     return (
         <section className='container'>
-            <h1 className="title">Now in Theater</h1>
+            <h2 className="title">Now in Theater</h2>
             <div className='movie'>
                 <Slider {...settings}>
                     {movie.map(m => (

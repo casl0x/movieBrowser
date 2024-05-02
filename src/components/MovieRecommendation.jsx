@@ -46,6 +46,7 @@ export default function MovieRecommendation() {
       }, [movieId]);
   return (
     <div>
+      <h2 className="title">Recommendation</h2>
     {movie ? (
         <div className='movie'>
             <Slider {...settings}>
