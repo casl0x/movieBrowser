@@ -149,3 +149,17 @@ export async function FetchRecommendatedSeries(tvId) {
         throw new Error("Can't fetch the datas")
     }    
 }
+
+export async function FetchAllMovie() {         
+    try {
+        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}&page=1`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
