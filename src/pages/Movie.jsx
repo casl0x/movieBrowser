@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { FetchMovie } from '../utils/request'
+import MovieDetails from "../components/MovieDetails";
+import MovieRecommendation from "../components/MovieRecommendation";
 
 export default function Movie() {
   const [movie, setMovie] = useState(null)
@@ -16,14 +15,9 @@ export default function Movie() {
 
   return (
     <>
-      {
-        movie ? (
-          <h2>{movie.title}</h2>
-          
-        ) : (
-          <p>Loading ...</p>
-        )
-      }
+      <MovieDetails />
+      <MovieRecommendation />
+
     </>
   )
 }

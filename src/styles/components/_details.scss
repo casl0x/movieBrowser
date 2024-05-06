@@ -1,0 +1,17 @@
+.details {
+    &-img {
+        display: flex;
+        margin: 0 auto;
+
+    }
+}
+
+.horizontal {
+    width: 100%;
+    border-radius: 0;
+}
+
+.vertical {
+    width: 80%;
+    border-radius: 5%;  
+}

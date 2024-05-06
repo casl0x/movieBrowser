@@ -38,14 +38,126 @@ export async function FetchUpcoming() {
     }    
 }
 
-export async function FetchMovie(movieId) {         
+export async function FetchNowPlaying() {         
     try {
-        const response = await fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}`, options);
+        const response = await fetch(`${API_URL}movie/now_playing?api_key=${API_KEY}`, options);
         if (!response.ok) {
         throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        return data;
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchPopularMovie() {         
+    try {
+        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchPopularSeries() {         
+    try {
+        const response = await fetch(`${API_URL}tv/popular?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchMovie(movieId) {         
+    try {
+        const response = await fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
+    }    
+}
+
+export async function FetchSerie(tvId) {         
+    try {
+        const response = await fetch(`${API_URL}tv/${tvId}?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
+    }    
+}
+
+export async function FetchGenre () {         
+    try {
+        const response = await fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
+    }    
+}
+
+export async function FetchRecommendatedMovies(movieId) {         
+    try {
+        const response = await fetch(`${API_URL}movie/${movieId}/recommendations?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchRecommendatedSeries(tvId) {         
+    try {
+        const response = await fetch(`${API_URL}tv/${tvId}/recommendations?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}
+
+export async function FetchAllMovie() {         
+    try {
+        const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}&page=1`, options);
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data.results
     } catch (error) {
         console.error(error)
         throw new Error("Can't fetch the datas")
