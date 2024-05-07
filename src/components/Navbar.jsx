@@ -15,6 +15,7 @@ export default function Navbar() {
   
   return (
     <header className='header'>
+        <img src="/logo-long.svg" alt="" className='logo'/>
         <nav className='navbar'>
           <div className="navbar-container">
             <div className='navbar-icon' onClick={toggleActive}>
@@ -38,6 +39,11 @@ export default function Navbar() {
                 <li>
                   <Link to="/movie" onClick={toggleActive} className='navlink'>
                     Movie
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/tv" onClick={toggleActive} className='navlink'>
+                    Serie
                   </Link>
                 </li>
                 <li>

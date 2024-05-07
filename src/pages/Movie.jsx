@@ -1,4 +1,5 @@
 import MovieDetails from "../components/MovieDetails";
+import MovieRecommendation from "../components/MovieRecommendation";
 
 export default function Movie() {
   const [movie, setMovie] = useState(null)
@@ -14,7 +15,8 @@ export default function Movie() {
 
   return (
     <>
-      <MovieDetails />
+        <MovieDetails />
+        <MovieRecommendation />
     </>
   )
 }
