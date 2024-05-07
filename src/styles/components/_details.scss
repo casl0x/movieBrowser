@@ -2,7 +2,6 @@
     &-img {
         display: flex;
         margin: 0 auto;
-
     }
 }
 
@@ -12,6 +11,19 @@
 }
 
 .vertical {
-    width: 80%;
+    width: 100%;
     border-radius: 5%;  
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+    "x x" 
+    "a b";
+    &-img {
+        grid-area: a;
+    }
+    &-info {
+        grid-area: b;
+    }
 }

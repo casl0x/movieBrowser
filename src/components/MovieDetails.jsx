@@ -8,6 +8,7 @@ export default function MovieDetails() {
     const [movie, setMovie] = useState(null);
     const { movieId } = useParams();
     const isMobile = useMediaQuery({maxWidth: "768px"});
+    const displayDetails = isMobile ? "flex" : "grid";
     const imgClassName = isMobile ? "horizontal" : "vertical";
   
     useEffect(() => {
@@ -23,10 +24,10 @@ export default function MovieDetails() {
     return (
       <div>
         {movie ? (
-          <div className='details'>
-            <h2>{movie.title}</h2>            
-            <img src={isMobile ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : `https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className={`details-img ${imgClassName}`}/>
-            <div className='details-info'>
+          <div className={`details ${displayDetails}`}>
+            <h2 className='title'>{movie.title}</h2>            
+            <img src={isMobile ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : `https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} className={`details-img ${imgClassName} ${isMobile ? "flex-img" : "grid-img"}`}/>
+            <div className={`details-info ${isMobile ? "flex-info" : "grid-info"}`}>
               <p>{convertTime(movie.runtime)}</p>
               <p>( {convertDate(movie.release_date)} )</p>
               <p>Genres : {movie.genres.map((genre, index) => (

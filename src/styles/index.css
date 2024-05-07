@@ -195,8 +195,19 @@ footer {
 }
 
 .vertical {
-  width: 80%;
+  width: 100%;
   border-radius: 5%;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "x x" "a b";
+}
+.grid-img {
+  grid-area: a;
+}
+.grid-info {
+  grid-area: b;
 }
 
 body {
