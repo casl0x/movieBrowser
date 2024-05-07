@@ -9,26 +9,31 @@ export default function PopularSeries() {
     const [serie, setSerie] = useState([]);
 
     const settings = {
+        initialSlide: -1,
         dots: false,
         infinite: false,
         speed: 500,
-        arrows: false,
+        arrows: true,
         slidesToShow: 6,
         slidesToScroll: 6,
+        centerMode: false,
         responsive: [
             {
                 breakpoint: 770,
                 settings: {
                   slidesToShow: 4,
                   slidesToScroll: 4,
-                  initialSlide: 4
+                  dots: true,
+                  arrows: false,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                   slidesToShow: 2,
-                  slidesToScroll: 2
+                  slidesToScroll: 2,
+                  dots: true,
+                  arrows: false,
                 }
             }
         ]
@@ -51,7 +56,6 @@ export default function PopularSeries() {
                         <Link to={`/tv/${s.id}`} key={s.id}>
                             <div>
                                 <img src={`https://image.tmdb.org/t/p/w500${s.poster_path}`} alt={s.name} className='movie-poster'/>
-                                <h2 className='movie-title'>{s.name}</h2>
                             </div>                        
                         </Link>
                     ))}

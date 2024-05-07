@@ -10,30 +10,35 @@ export default function MovieRecommendation() {
     const { movieId } = useParams();
 
     const settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        arrows: false,
-        slidesToShow: 6,
-        slidesToScroll: 6,
-        responsive: [
-            {
-                breakpoint: 770,
-                settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 4,
-                  initialSlide: 4
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2
-                }
-            }
-        ]
-    }
+      initialSlide: -1,
+      dots: false,
+      infinite: false,
+      speed: 500,
+      arrows: true,
+      slidesToShow: 6,
+      slidesToScroll: 6,
+      centerMode: false,
+      responsive: [
+          {
+              breakpoint: 770,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: true,
+                arrows: false,
+              }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                dots: true,
+                arrows: false,
+              }
+          }
+      ]
+  }
     
     useEffect(() => {
         const fetchMovieReco = async () => {

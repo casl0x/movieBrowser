@@ -13,6 +13,9 @@ export default function Home() {
         <NowPlaying />
         <PopularMovies />
         <PopularSeries />
+        <div>
+            <p>You've seen it all!</p>
+        </div>
     </>
 
   )

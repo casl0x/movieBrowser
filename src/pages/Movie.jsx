@@ -4,9 +4,8 @@ import MovieRecommendation from "../components/MovieRecommendation";
 export default function Movie() {
   return (
     <>
-      <MovieDetails />
-      <MovieRecommendation />
-
+        <MovieDetails />
+        <MovieRecommendation />
     </>
   )
 }
