@@ -2,21 +2,16 @@ import MovieDetails from "../components/MovieDetails";
 import MovieRecommendation from "../components/MovieRecommendation";
 
 export default function Movie() {
-  const [movie, setMovie] = useState(null)
-  const { movieId } = useParams()
-
-  useEffect(() => {
-    const fetchMovieDetails = async () => {
-        const movies = await FetchMovie(movieId);
-        setMovie(movies)
-    }
-    fetchMovieDetails()
-}, [movieId])
 
   return (
     <>
+<<<<<<< HEAD
         <MovieDetails />
         <MovieRecommendation />
+=======
+      <MovieDetails />
+      <MovieRecommendation />
+>>>>>>> 0778e4ded66896762f784d8ce125ac7ba7aa056d
     </>
   )
 }
