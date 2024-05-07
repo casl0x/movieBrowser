@@ -178,3 +178,31 @@ export async function FetchAllMovie() {
         throw new Error("Can't fetch the datas")
     }    
 }
+
+export async function FetchAllSerie() {
+    try {
+        // api url for 5 page
+        const page1 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=1`)
+        const page2 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=2`)
+        const page3 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=3`)
+        const page4 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=4`)
+        const page5 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=5`)
+
+        const response = await Promise.all([fetch(page1, options), fetch(page2, options), fetch(page3, options), fetch(page4, options), fetch(page5, options)])
+
+        for (const res of response) {
+            if (!res.ok) {
+                throw new Error('Network response was not ok');
+            }
+        }
+
+        const data = await Promise.all(response.map(res => res.json()));
+
+        const allMoviesData = data.reduce((acc, curr) => acc.concat(curr.results), []);
+
+        return allMoviesData;
+    } catch (error) {
+        console.error(error)
+        throw new Error("Can't fetch the datas")
+    }    
+}

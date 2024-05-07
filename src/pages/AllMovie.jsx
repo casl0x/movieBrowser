@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { FetchAllMovie } from '../utils/request';
-import { convertDate } from '../utils/convertTime';
 
 export default function AllMovie() {
     const [movies, setMovies] = useState([]);
@@ -12,7 +11,6 @@ export default function AllMovie() {
                 const moviesData = await FetchAllMovie();
                 setMovies(moviesData);
             } catch (error) {
-                // Gérer l'erreur ici, par exemple, définir un état d'erreur pour informer l'utilisateur
                 console.error(error);
             }
         };

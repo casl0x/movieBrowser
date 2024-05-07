@@ -42,6 +42,11 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/tv" onClick={toggleActive} className='navlink'>
+                    Serie
+                  </Link>
+                </li>
+                <li>
                   <Link to="/favorite" onClick={toggleActive} className='navlink'>
                     Favorite
                   </Link>
