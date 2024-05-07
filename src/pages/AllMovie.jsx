@@ -8,8 +8,13 @@ export default function AllMovie() {
 
     useEffect(() => {
         const fetchMovies = async () => {
-            const  moviesData  = await FetchAllMovie();
-            setMovies(moviesData);
+            try {
+                const moviesData = await FetchAllMovie();
+                setMovies(moviesData);
+            } catch (error) {
+                // Gérer l'erreur ici, par exemple, définir un état d'erreur pour informer l'utilisateur
+                console.error(error);
+            }
         };
         fetchMovies();
     }, []);
@@ -20,8 +25,6 @@ export default function AllMovie() {
                 <Link to={`/movie/${m.id}`} key={m.id}>
                     <div>
                         <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
-                        <h2 className='movie-title'>{m.title}</h2>
-                        <p className='movie-info'>{convertDate(m.release_date)}</p>
                     </div>                        
                 </Link>
             ))}
