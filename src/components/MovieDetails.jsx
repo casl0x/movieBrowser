@@ -34,7 +34,7 @@ export default function MovieDetails() {
                     <span key={genre.id}>{genre.name} {index !== movie.genres.length - 1 && " - "}</span>
                   ))}
                </p> 
-              <p>{movie.overview}</p>              
+              <p className='overview'>{movie.overview}</p>              
             </div>
           </div>
         ) : (

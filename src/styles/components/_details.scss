@@ -3,6 +3,9 @@
         display: flex;
         margin: 0 auto;
     }
+    &-info {
+        margin: 2rem;
+    }
 }
 
 .horizontal {
@@ -26,4 +29,16 @@
     &-info {
         grid-area: b;
     }
+}
+
+.flex {
+    &-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.overview {
+    line-height: 1.5rem;
 }

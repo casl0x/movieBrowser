@@ -3,13 +3,13 @@ let API_KEY = import.meta.env.VITE_REACT_APP_API_KEY;
 let ACCESS_TOKEN = import.meta.env.VITE_REACT_APP_ACCESS_TOKEN;
 
 const options = {
-    method: 'GET',
     headers: {
         accept: 'application/json',
         Authorization: `Bearer ${ACCESS_TOKEN}`
     }
 };
 
+// homepage
 export async function FetchTopRated() {         
     try {
         const response = await fetch(`${API_URL}movie/popular?api_key=${API_KEY}`, options);
@@ -80,37 +80,10 @@ export async function FetchPopularSeries() {
     }    
 }
 
+// solo movie page
 export async function FetchMovie(movieId) {         
     try {
         const response = await fetch(`${API_URL}movie/${movieId}?api_key=${API_KEY}`, options);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        return data; 
-    } catch (error) {
-        console.error(error);
-        throw new Error("Can't fetch the datas");
-    }    
-}
-
-export async function FetchSerie(tvId) {         
-    try {
-        const response = await fetch(`${API_URL}tv/${tvId}?api_key=${API_KEY}`, options);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        return data; 
-    } catch (error) {
-        console.error(error);
-        throw new Error("Can't fetch the datas");
-    }    
-}
-
-export async function FetchGenre () {         
-    try {
-        const response = await fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}`, options);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -136,6 +109,35 @@ export async function FetchRecommendatedMovies(movieId) {
     }    
 }
 
+export async function FetchGenre () {         
+    try {
+        const response = await fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
+    }    
+}
+
+// solo serie page
+export async function FetchSerie(tvId) {         
+    try {
+        const response = await fetch(`${API_URL}tv/${tvId}?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return data; 
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
+    }    
+}
+
 export async function FetchRecommendatedSeries(tvId) {         
     try {
         const response = await fetch(`${API_URL}tv/${tvId}/recommendations?api_key=${API_KEY}`, options);
@@ -150,10 +152,9 @@ export async function FetchRecommendatedSeries(tvId) {
     }    
 }
 
-
+// all movies page
 export async function FetchAllMovie() {
     try {
-        // api url for 5 page
         const page1 = (`${API_URL}movie/popular?api_key=${API_KEY}&page=1`)
         const page2 = (`${API_URL}movie/popular?api_key=${API_KEY}&page=2`)
         const page3 = (`${API_URL}movie/popular?api_key=${API_KEY}&page=3`)
@@ -179,9 +180,9 @@ export async function FetchAllMovie() {
     }    
 }
 
+// all series page
 export async function FetchAllSerie() {
     try {
-        // api url for 5 page
         const page1 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=1`)
         const page2 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=2`)
         const page3 = (`${API_URL}tv/popular?api_key=${API_KEY}&page=3`)
