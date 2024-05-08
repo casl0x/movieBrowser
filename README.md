@@ -1,9 +1,8 @@
 # Movie Browser 🎥
 
 ## About the Project :
-Movie Browser is a application to lists all the movies. Click here to test it → [🍿](https://movie-browser-wine.vercel.app/).
+Movie Browser is a application to lists all the movies.[Click here to test it 🍿](https://movie-browser-wine.vercel.app/).
 
-**Deploy with :** [Vercel](https://vercel.com/)
 
 
 ### Built with : 
@@ -34,9 +33,9 @@ Before you start, make sure you have Node.js installed → [Click here to instal
 4. Have fun ;) 
 
 ## Features
-- [x] Poster overview and some information
 - [x] Drop-down menu in mobile display 
-- [x] Movie display with all information
-- [ ] Display of all films with a genre filter
+- [x] Display information of a movie/serie 
+- [x] Page with a lot of movies and series
+- [ ] Genre filter
 - [ ] Search bar 
 
