@@ -18,11 +18,11 @@ export default function AllSerie() {
     }, []);
 
     return (
-        <section>
+        <section className='all'>
             {series.map(s => (
-                <Link to={`/tv/${s.id}`} key={s.id}>
+                <Link to={`/tv/${s.id}`} key={s.id} className='all-card'>
                     <div>
-                        <img src={`https://image.tmdb.org/t/p/w500${s.poster_path}`} alt={s.title} className='movie-poster'/>
+                        <img src={`https://image.tmdb.org/t/p/w500${s.poster_path}`} alt={s.title} className='all-poster'/>
                     </div>                        
                 </Link>
             ))}
