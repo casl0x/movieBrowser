@@ -18,11 +18,11 @@ export default function AllMovie() {
     }, []);
 
     return (
-        <section>
+        <section className='all'>
             {movies.map(m => (
-                <Link to={`/movie/${m.id}`} key={m.id}>
+                <Link to={`/movie/${m.id}`} key={m.id} className='all-card'>
                     <div>
-                        <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='movie-poster'/>
+                        <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='all-poster'/>
                     </div>                        
                 </Link>
             ))}
