@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { FetchAllMovie } from '../utils/request';
+import Genres from '../components/Genres';
 
 export default function AllMovie() {
     const [movies, setMovies] = useState([]);
@@ -18,14 +19,17 @@ export default function AllMovie() {
     }, []);
 
     return (
-        <section className='all'>
-            {movies.map(m => (
-                <Link to={`/movie/${m.id}`} key={m.id} className='all-card'>
-                    <div>
-                        <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='all-poster'/>
-                    </div>                        
-                </Link>
-            ))}
-        </section>
+        <>
+            {/* <Genres /> */}
+            <section className='all'>
+                {movies.map(m => (
+                    <Link to={`/movie/${m.id}`} key={m.id} className='all-card'>
+                        <div>
+                            <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='all-poster'/>
+                        </div>                        
+                    </Link>
+                ))}
+            </section>
+        </>
     );
 }
