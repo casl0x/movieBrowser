@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FetchGenre } from '../utils/request'
-import { useParams } from 'react-router-dom'
 
-export default function Genres() {
+export default function Genres({onSelectGenre}) {
     const [genres, setGenres] = useState([])
 
     useEffect(() => {
@@ -12,12 +11,18 @@ export default function Genres() {
         };
         fetchMovieGenre()
     }, [])
+
+    const handleSelect = (e) => {
+        const selectedGenre=e.target.value
+        onSelectGenre(selectedGenre)
+    }
+
   return (
     <div>
-        <select name="genre" id="genre">
-            <option value="">xxx</option>
+        <select name="genre" id="genre" onChange={handleSelect}>
+            <option value="">Select genre</option>
             {genres.map(g => (
-                <option key={g.id} value={g.name}>{g.name}</option>
+                <option key={g.id} value={g.id}>{g.name}</option>
             ))}
         </select>
     </div>

@@ -5,6 +5,7 @@ import Genres from '../components/Genres';
 
 export default function AllMovie() {
     const [movies, setMovies] = useState([]);
+    const [selectGenre, setSelectGenre] = useState('')
 
     useEffect(() => {
         const fetchMovies = async () => {
@@ -16,13 +17,18 @@ export default function AllMovie() {
             }
         };
         fetchMovies();
-    }, []);
+    }, [selectGenre]);
+
+    const filterMovies = selectGenre ? movies.filter(movie => {
+        const result = movie.genre_ids.includes(parseInt(selectGenre)); 
+        return result;
+    }) : movies;    
 
     return (
         <>
-            <Genres />
+            <Genres onSelectGenre={setSelectGenre} />
             <section className='all'>
-                {movies.map(m => (
+                {filterMovies.map(m => (
                     <Link to={`/movie/${m.id}`} key={m.id} className='all-card'>
                         <div>
                             <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt={m.title} className='all-poster'/>

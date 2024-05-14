@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Movie from './pages/Movie';
 import AllMovie from './pages/AllMovie';
+import Genres from './components/Genres';
 import Serie from './pages/Serie';
 import AllSerie from './pages/AllSerie';
 import Favorite from './pages/Favorite';
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/movie" element={<AllMovie />} />
             <Route path="/tv" element={<AllSerie />} />
             <Route path="/movie/:movieId" element={<Movie />} />
+            <Route path="/movie/:genreId" element={<Genres />} />
             <Route path="/tv/:tvId" element={<Serie />} />
             <Route path="/favorite" element={<Favorite />} />
             <Route path="/watchlist" element={<WatchList />} />
