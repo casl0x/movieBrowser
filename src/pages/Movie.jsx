@@ -1,5 +1,5 @@
-import MovieDetails from "../components/MovieDetails";
-import MovieRecommendation from "../components/MovieRecommendation";
+import { MovieDetails } from "../components/Details";
+import {MovieRecommendation} from "../components/Recommendation";
 
 export default function Movie() {
 

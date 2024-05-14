@@ -36,6 +36,8 @@ Before you start, make sure you have Node.js installed → [Click here to instal
 - [x] Drop-down menu in mobile display 
 - [x] Display information of a movie/serie 
 - [x] Page with a lot of movies and series
-- [ ] Genre filter
-- [ ] Search bar 
+- [x] Genre filter
+- [ ] Search bar
+- [ ] List of favorite movie
+- [ ] Watchlist 
 

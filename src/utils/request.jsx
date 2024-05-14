@@ -167,6 +167,20 @@ export async function FetchAllMovie() {
     }    
 }
 
+export async function FetchGenreMovie () {         
+    try {
+        const response = await fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}`, options);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        return  data.genres
+    } catch (error) {
+        console.error(error);
+        throw new Error("Can't fetch the datas");
+    }    
+}
+
 // all series page
 export async function FetchAllSerie() {
     try {
@@ -186,19 +200,18 @@ export async function FetchAllSerie() {
 
         const data = await Promise.all(response.map(res => res.json()));
 
-        const allMoviesData = data.reduce((acc, curr) => acc.concat(curr.results), []);
+        const allSeriesData = data.reduce((acc, curr) => acc.concat(curr.results), []);
 
-        return allMoviesData;
+        return allSeriesData;
     } catch (error) {
         console.error(error)
         throw new Error("Can't fetch the datas")
     }    
 }
 
-// other
-export async function FetchGenre () {         
+export async function FetchGenreSerie () {         
     try {
-        const response = await fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}`, options);
+        const response = await fetch(`${API_URL}genre/tv/list?api_key=${API_KEY}`, options);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }

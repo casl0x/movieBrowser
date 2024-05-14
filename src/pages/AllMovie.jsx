@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { FetchAllMovie } from '../utils/request';
-import Genres from '../components/Genres';
+import { GenresMovie } from '../components/Genres';
 
 export default function AllMovie() {
     const [movies, setMovies] = useState([]);
@@ -26,7 +26,7 @@ export default function AllMovie() {
 
     return (
         <>
-            <Genres onSelectGenre={setSelectGenre} />
+            <GenresMovie onSelectGenre={setSelectGenre} />
             <section className='all'>
                 {filterMovies.map(m => (
                     <Link to={`/movie/${m.id}`} key={m.id} className='all-card'>
