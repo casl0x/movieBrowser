@@ -3,24 +3,22 @@ import { FetchGenre } from '../utils/request'
 import { useParams } from 'react-router-dom'
 
 export default function Genres() {
-    const [genre, setGenre] = useState([])
-    const {genreId} = useParams()
+    const [genres, setGenres] = useState([])
 
     useEffect(() => {
         const fetchMovieGenre = async () => {
-            const genreData = FetchGenre(genreId)
-            setGenre(genreData)
+            const genreData = await FetchGenre()
+            setGenres(genreData)
         };
         fetchMovieGenre()
-    }, [genreId])
-
+    }, [])
   return (
     <div>
         <select name="genre" id="genre">
             <option value="">xxx</option>
-            {genre.map(g => {
+            {genres.map(g => (
                 <option key={g.id} value={g.name}>{g.name}</option>
-            })}
+            ))}
         </select>
     </div>
   )

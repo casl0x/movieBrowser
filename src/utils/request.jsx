@@ -196,15 +196,14 @@ export async function FetchAllSerie() {
 }
 
 // other
-export async function FetchGenre (genreId) {         
+export async function FetchGenre () {         
     try {
         const response = await fetch(`${API_URL}genre/movie/list?api_key=${API_KEY}`, options);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        const findGenre = data.genres.find(genre => genre.id === parseInt(genreId))
-        return findGenre ? [findGenre] : [] 
+        return  data.genres
     } catch (error) {
         console.error(error);
         throw new Error("Can't fetch the datas");

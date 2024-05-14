@@ -20,7 +20,7 @@ export default function AllMovie() {
 
     return (
         <>
-            {/* <Genres /> */}
+            <Genres />
             <section className='all'>
                 {movies.map(m => (
                     <Link to={`/movie/${m.id}`} key={m.id} className='all-card'>
