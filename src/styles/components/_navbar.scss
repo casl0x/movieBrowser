@@ -15,12 +15,13 @@
     &-list {
         display: none;
         &.active {
+            background-color: $primary;
             display: flex;
             flex-direction: column;
-            align-items: flex-end;
+            align-items: center;
             position: absolute;
             right: 0;
-            width: 100%;
+            width: 100vw;
             padding-top: 2rem;
             gap: 1rem;          
         }
