@@ -54,6 +54,7 @@ table {
   height: 5rem;
   display: flex;
   align-items: center;
+  gap: 3rem;
 }
 
 .navbar {
@@ -253,6 +254,10 @@ footer {
   font: inherit;
   padding: 0 0.5rem;
   overflow-y: scroll;
+}
+
+.search {
+  display: flex;
 }
 
 body {

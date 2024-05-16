@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useMediaQuery } from 'react-responsive'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import Search from './Search'
 
 
 export default function Navbar() {
@@ -16,6 +17,7 @@ export default function Navbar() {
   return (
     <header className='header'>
         <img src="/logo-long.svg" alt="" className='logo'/>
+        <Search />
         <nav className='navbar'>
           <div className="navbar-container">
             <div className='navbar-icon' onClick={toggleActive}>
@@ -28,7 +30,7 @@ export default function Navbar() {
                       <FontAwesomeIcon icon={faBars}/>
                     </div>                       
                 )}
-            </div> 
+            </div>
             <div className="navbar-container">
               <ul className={`${listClassName} ${isActive ? "active" : ""}`}>
                 <li>

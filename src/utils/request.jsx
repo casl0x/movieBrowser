@@ -199,7 +199,6 @@ export async function FetchAllSerie() {
         }
 
         const data = await Promise.all(response.map(res => res.json()));
-
         const allSeriesData = data.reduce((acc, curr) => acc.concat(curr.results), []);
 
         return allSeriesData;
