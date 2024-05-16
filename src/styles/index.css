@@ -75,7 +75,7 @@ table {
   position: absolute;
   right: 0;
   width: 100vw;
-  padding-top: 2rem;
+  padding-block: 2rem;
   gap: 1rem;
 }
 .navbar-icon {
@@ -238,7 +238,7 @@ footer {
   width: 100%;
 }
 
-.select {
+.filter {
   display: flex;
   gap: 1rem;
   margin: auto;
@@ -246,7 +246,7 @@ footer {
   align-items: center;
   margin-right: 5rem;
 }
-.select-container {
+.filter-select {
   background-color: rgb(144, 206, 161);
   border-radius: 4px;
   border: none;

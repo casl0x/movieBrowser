@@ -51,13 +51,6 @@ export default function Navbar() {
                     Favorite
                   </Link>
                 </li>
-                <li>
-                  <Link to="/watchlist" onClick={toggleActive} className='navlink'>
-                    Watchlist
-                  </Link>
-                </li>
-                <li>
-                </li>
               </ul>         
             </div>
           </div>
