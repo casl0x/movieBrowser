@@ -237,6 +237,23 @@ footer {
   width: 100%;
 }
 
+.select {
+  display: flex;
+  gap: 1rem;
+  margin: auto;
+  justify-content: end;
+  align-items: center;
+  margin-right: 5rem;
+}
+.select-container {
+  background-color: rgb(144, 206, 161);
+  border-radius: 4px;
+  border: none;
+  font: inherit;
+  padding: 0 0.5rem;
+  overflow-y: scroll;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   color: #ffffff;

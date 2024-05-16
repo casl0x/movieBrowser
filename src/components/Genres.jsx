@@ -19,12 +19,14 @@ export function GenresMovie({onSelectGenre}) {
 
   return (
     <div>
-        <select name="genre" id="genre" onChange={handleSelect}>
-            <option value="">Select genre</option>
-            {genres.map(g => (
-                <option key={g.id} value={g.id}>{g.name}</option>
-            ))}
-        </select>
+        <label htmlFor="" className='select'> Genre :
+            <select name="genre" className='select-container' onChange={handleSelect}>
+                <option value="">~~</option>
+                {genres.map(g => (
+                    <option key={g.id} value={g.id}>{g.name}</option>
+                ))}
+            </select>
+        </label>
     </div>
   )
 }
@@ -46,9 +48,9 @@ export function GenresSeries({onSelectGenre}) {
     }
 
   return (
-    <div>
-        <select name="genre" id="genre" onChange={handleSelect}>
-            <option value="">Select genre</option>
+    <div className='filter'>
+        <select name="genre" className='filter-select' onChange={handleSelect}>
+            <option value="">Genre Filter </option>
             {genres.map(g => (
                 <option key={g.id} value={g.id}>{g.name}</option>
             ))}

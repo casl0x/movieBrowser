@@ -1,0 +1,17 @@
+.select {
+    display: flex;
+    gap: 1rem;
+    margin: auto;
+    justify-content: end;
+    align-items: center;
+    margin-right: 5rem;
+    &-container {
+        background-color: $tertiary;
+        border-radius: 4px;
+        border: none;
+        font: inherit;
+        padding: 0 0.5rem;
+        overflow-y: scroll;
+    }
+
+}
