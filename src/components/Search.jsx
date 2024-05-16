@@ -85,6 +85,7 @@ export default function Search() {
                         <p>{result.title || result.name}</p>
                     </div>
                 ))}
+                <button onClick={closeModal}>Close</button>
             </div>
         </Modal>     
     </div>
