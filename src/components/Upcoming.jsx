@@ -9,14 +9,13 @@ export default function Upcoming() {
     const [movie, setMovie] = useState([]);
 
     const settings = {
-        initialSlide: 2,
+        initialSlide: 0,
         dots: false,
         infinite: false,
         speed: 500,
         arrows: true,
         slidesToShow: 6,
         slidesToScroll: 6,
-        centerMode: false,
         responsive: [
             {
                 breakpoint: 770,
