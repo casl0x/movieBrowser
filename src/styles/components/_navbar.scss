@@ -13,6 +13,7 @@
     justify-content: end;
     position: sticky;
     margin: auto 2rem;
+    font-size: 2rem;
     &-list {
         display: none;
         &.active {
@@ -52,5 +53,5 @@
 }
 
 .logo {
-    width: 25vw;
+    width: 25%;
 }
