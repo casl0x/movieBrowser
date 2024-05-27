@@ -16,7 +16,6 @@ const options = {
 
 export default function Search() {
   const [search, setSearch] = useState('');
-  const [suggestions, setSuggestions] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState([]);
 
@@ -29,23 +28,11 @@ export default function Search() {
     };
 
     const handleSearch = async (e) => {
-        const value = e.target.value;
-        setSearch(value);
-        try {
-            const response = await fetch (`${API_URL}search/multi?query=${value}&api_key=${API_KEY}`, options)
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            const data = await response.json();
-            setSuggestions(data.results)
-        } catch (error) {
-            console.error(error);
-            setSuggestions([])
-        }
+        setSearch(e.target.value);
     };
 
-    const handleSearchSubmit = async (event) => {
-        event.preventDefault();
+    const handleSearchSubmit = async (e) => {
+        e.preventDefault();
         try {
             const response = await fetch(`${API_URL}search/multi?query=${search}&api_key=${API_KEY}`, options);
             if (!response.ok) {

@@ -9,7 +9,7 @@ export function MovieRecommendation() {
     const { movieId } = useParams();
 
     const settings = {
-      initialSlide: -1,
+      initialSlide: 2,
       dots: false,
       infinite: false,
       speed: 500,
