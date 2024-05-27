@@ -17,7 +17,7 @@ export default function Navbar() {
   return (
     <header className='header'>
         <img src="/logo-long.svg" alt="" className='logo'/>
-        <Search />
+        {/* <Search /> */}
         <nav className='navbar'>
           <div className="navbar-container">
             <div className='navbar-icon' onClick={toggleActive}>
