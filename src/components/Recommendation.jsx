@@ -48,7 +48,7 @@ export function MovieRecommendation() {
   
       }, [movieId]);
   return (
-    <div>
+    <div className='container'>
       <h2 className="title">Recommendation</h2>
     {movie ? (
         <div className='movie'>

@@ -64,7 +64,7 @@ table {
   justify-content: end;
   position: sticky;
   margin: auto 2rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .navbar-list {
   display: none;
@@ -147,7 +147,7 @@ footer {
   width: 65%;
   border: 1px solid black;
   border-radius: 5%;
-  margin: 1rem auto;
+  margin: auto;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -157,11 +157,16 @@ footer {
   height: 100%;
 }
 
+.discover {
+  margin: 4rem auto;
+}
+
 .title {
   color: #ffffff;
   font-size: 2rem;
   font-weight: 900;
   padding: 1rem;
+  padding-left: 4rem;
 }
 
 .movie {
@@ -184,6 +189,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container {
+  margin-bottom: 4rem;
 }
 
 .details-img {
@@ -263,6 +272,38 @@ footer {
 
 .search {
   display: flex;
+}
+
+.more {
+  background-color: rgba(1, 180, 228, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding-block: 1.5rem;
+  gap: 2rem;
+}
+.more-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.more-button {
+  display: flex;
+  gap: 4rem;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: rgb(13, 37, 63);
+  border: none;
+}
+.btn:hover {
+  background-color: rgba(144, 206, 161, 0.5);
+}
+.btn-text {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 body {

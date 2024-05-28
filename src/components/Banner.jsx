@@ -19,7 +19,7 @@ export function Banner () {
     }
 
     return (
-        <section>
+        <section className="discover">
             <h1 className="title">Daily discoveries</h1>
             <div className="daytop">
                 <img src={`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`} alt={movie.title} className="poster"/>

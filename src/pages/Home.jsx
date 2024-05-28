@@ -15,10 +15,10 @@ export default function Home() {
         <PopularMovies />
         <PopularSeries />
         <div className='more'>
-            <p>You've seen it all!</p>
-            <div>
-              <Link to={'/movie'} className='more-movie btn'>Seen more movies</Link>
-              <Link to={'/tv'} className='more-serie btn'>Seen more series</Link>
+            <h3 className='more-title'>You've seen it all !</h3>
+            <div className='more-button'>
+              <button className='btn'><Link to={'/movie'} className='btn-text'>Seen more movies</Link></button>
+              <button className='btn'><Link to={'/tv'} className='btn-text'>Seen more series</Link></button>
             </div>
         </div>
     </>
